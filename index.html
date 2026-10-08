@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>9 «ДК» — Наш класс</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loader">
+    <div class="loader-logo">9<span>ДК</span></div>
+    <div class="loader-line"></div>
+</div>
+
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="#home" class="logo">
+            <div class="logo-box">9</div>
+            <div>
+                <strong>ДК</strong>
+                <small>Наш класс</small>
+            </div>
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#home" data-lang="navHome">Главная</a>
+            <a href="#schedule" data-lang="navSchedule">Расписание</a>
+            <a href="#news" data-lang="navNews">Новости</a>
+            <a href="#gallery" data-lang="navGallery">Фото</a>
+            <a href="#videos" data-lang="navVideos">Видео</a>
+            <a href="#events" data-lang="navEvents">Мероприятия</a>
+            <a href="#class" data-lang="navClass">Класс</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="icon-btn" id="themeBtn" title="Тема">
+                ◐
+            </button>
+
+            <button class="language-btn" id="languageBtn">
+                RU
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <div class="badge">
+                <span class="live-dot"></span>
+                2026 / 2027
+            </div>
+
+            <h1>
+                Мы — <span>9 «ДК»</span>
+            </h1>
+
+            <p>
+                Наш класс. Наши истории. Наши победы.
+                Всё самое важное — в одном месте.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#schedule" class="btn btn-primary">
+                    Посмотреть расписание
+                    <span>→</span>
+                </a>
+
+                <a href="#gallery" class="btn btn-secondary">
+                    Наша галерея
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-top">
+                <span>СЕГОДНЯ</span>
+                <span id="currentDate">—</span>
+            </div>
+
+            <div class="clock" id="clock">
+                00:00
+            </div>
+
+            <div class="hero-card-bottom">
+                <span>9 «ДК»</span>
+                <span class="online">
+                    <i></i> Online
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK STATS -->
+<section class="stats-section">
+
+    <div class="container stats">
+
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div>
+                <strong id="studentsCount">0</strong>
+                <span>Учеников</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div>
+                <strong id="lessonsCount">0</strong>
+                <span>Уроков в неделю</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div>
+                <strong id="achievementsCount">0</strong>
+                <span>Достижений</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">📸</div>
+            <div>
+                <strong id="photosCount">0</strong>
+                <span>Фотографий</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ANNOUNCEMENT -->
+<section class="announcement-section">
+
+    <div class="container">
+
+        <div class="announcement">
+
+            <div class="announcement-icon">
+                🔔
+            </div>
+
+            <div class="announcement-content">
+
+                <span>ПОСЛЕДНЕЕ ОБЪЯВЛЕНИЕ</span>
+
+                <h3 id="announcementTitle">
+                    Добро пожаловать на сайт 9 «ДК»!
+                </h3>
+
+                <p id="announcementText">
+                    Здесь будут появляться новости и важная информация нашего класса.
+                </p>
+
+            </div>
+
+            <span class="announcement-arrow">→</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SCHEDULE -->
+<section class="section" id="schedule">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">РАСПИСАНИЕ</span>
+                <h2>Наши уроки</h2>
+            </div>
+
+            <div class="today-badge">
+                <span class="today-dot"></span>
+                <span id="todayName">Сегодня</span>
+            </div>
+
+        </div>
+
+
+        <div class="schedule-days">
+
+            <button class="day-btn active" data-day="monday">
+                <span>ПН</span>
+                <small>Пн</small>
+            </button>
+
+            <button class="day-btn" data-day="tuesday">
+                <span>ВТ</span>
+                <small>Вт</small>
+            </button>
+
+            <button class="day-btn" data-day="wednesday">
+                <span>СР</span>
+                <small>Ср</small>
+            </button>
+
+            <button class="day-btn" data-day="thursday">
+                <span>ЧТ</span>
+                <small>Чт</small>
+            </button>
+
+            <button class="day-btn" data-day="friday">
+                <span>ПТ</span>
+                <small>Пт</small>
+            </button>
+
+            <button class="day-btn" data-day="saturday">
+                <span>СБ</span>
+                <small>Сб</small>
+            </button>
+
+        </div>
+
+
+        <div class="schedule-list" id="scheduleList">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWS -->
+<section class="section section-dark" id="news">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">ПОСЛЕДНИЕ СОБЫТИЯ</span>
+                <h2>Новости класса</h2>
+            </div>
+
+            <button class="outline-btn" id="allNewsBtn">
+                Все новости →
+            </button>
+
+        </div>
+
+
+        <div class="news-grid" id="newsGrid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">НАША ЖИЗНЬ</span>
+                <h2>Фотографии</h2>
+            </div>
+
+            <button class="outline-btn" id="allPhotosBtn">
+                Все фото →
+            </button>
+
+        </div>
+
+
+        <div class="gallery-grid" id="galleryGrid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEOS -->
+<section class="section video-section" id="videos">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">ВИДЕО</span>
+                <h2>Наши видео</h2>
+            </div>
+
+        </div>
+
+
+        <div class="video-grid" id="videoGrid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+<section class="section" id="events">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">КАЛЕНДАРЬ</span>
+                <h2>Мероприятия</h2>
+            </div>
+
+        </div>
+
+
+        <div class="events-grid" id="eventsGrid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CLASS -->
+<section class="section section-dark" id="class">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">9 «ДК»</span>
+                <h2>Наш класс</h2>
+            </div>
+
+        </div>
+
+
+        <div class="class-layout">
+
+            <div class="class-info">
+
+                <div class="class-image">
+                    <div>9<br>ДК</div>
+                </div>
+
+                <div class="class-description">
+
+                    <span>НАША КОМАНДА</span>
+
+                    <h3>Один класс — одна команда.</h3>
+
+                    <p>
+                        Здесь можно разместить информацию о нашем классе,
+                        школе, классном руководителе и наших целях.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="students-panel">
+
+                <div class="students-header">
+                    <h3>Ученики</h3>
+                    <span id="studentTotal">0</span>
+                </div>
+
+                <div class="students-list" id="studentsList">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">НАШИ РЕЗУЛЬТАТЫ</span>
+                <h2>Достижения</h2>
+            </div>
+
+        </div>
+
+
+        <div class="achievements-grid" id="achievementsGrid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MATERIALS -->
+<section class="section materials-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">ПОЛЕЗНОЕ</span>
+                <h2>Материалы</h2>
+            </div>
+
+        </div>
+
+
+        <div class="materials-grid">
+
+            <a href="#" class="material-card">
+                <span>📚</span>
+                <div>
+                    <strong>Учебные материалы</strong>
+                    <small>Файлы и документы</small>
+                </div>
+                <b>→</b>
+            </a>
+
+            <a href="#" class="material-card">
+                <span>📝</span>
+                <div>
+                    <strong>Домашнее задание</strong>
+                    <small>Актуальные задания</small>
+                </div>
+                <b>→</b>
+            </a>
+
+            <a href="#" class="material-card">
+                <span>🔗</span>
+                <div>
+                    <strong>Полезные ссылки</strong>
+                    <small>Сайты для учёбы</small>
+                </div>
+                <b>→</b>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <div class="logo-box">9</div>
+                    <div>
+                        <strong>ДК</strong>
+                        <small>Наш класс</small>
+                    </div>
+                </div>
+
+                <p>
+                    Цифровое пространство нашего класса.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <strong>Разделы</strong>
+                    <a href="#schedule">Расписание</a>
+                    <a href="#news">Новости</a>
+                    <a href="#gallery">Фото</a>
+                    <a href="#videos">Видео</a>
+                </div>
+
+                <div>
+                    <strong>Класс</strong>
+                    <a href="#class">Ученики</a>
+                    <a href="#events">Мероприятия</a>
+                    <a href="#">Материалы</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 9 «ДК»
+            </span>
+
+            <span>
+                Сделано для нашего класса ❤️
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</main>
+
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<!-- NOTIFICATION -->
+<div class="toast" id="toast">
+    <span id="toastIcon">✓</span>
+    <span id="toastText">Готово</span>
+</div>
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
